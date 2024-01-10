@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Ian Chen - Engineer, Educator, Entrepreneur",
+    page_title="Lily Chou - UX Designer, Product Manager",
     page_icon="👨🏻‍💻",
     layout="centered",  # centered or wide
     initial_sidebar_state="auto",
