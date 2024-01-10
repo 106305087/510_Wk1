@@ -1,16 +1,33 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Lily Chou - UX Designer, Product Manager",
-    page_icon="👨🏻‍💻",
+    page_title="Lily Chou Personal Website",
+    page_icon="🌟",
     layout="centered",  # centered or wide
     initial_sidebar_state="auto",
 )
 
-col1, col2 = st.columns([0.3, 0.7])
+col1, col2 = st.columns([0.7, 0.3])
+
 with col1:
+    #st.subheader('Hey there! :wave:')
+    #st.title('I’m Pei-Syuan :blue[(Lily)] Chou')
+    #st.subheader('I’m a UX designer with an interdisciplinary background in :blue[business analysis] and :blue[user research].')
     st.markdown(
         """
+    *Hey there! :wave:*
+    ## I’m Pei-Syuan :blue[(Lily)] Chou
+    ##### I’m a UX designer with an interdisciplinary background in :blue[business analysis] and :blue[user research].
+      
+    - Pursuing HCI master dual degree in UW, Seattle & THU, Beijing
+    - Working experience in Web3, cybersecurity, and NGOs industry
+    """,
+        unsafe_allow_html=True
+    )
+
+with col2:
+    st.markdown(
+     """
     <style>
     .profile-img img {
         width: 100%;
@@ -26,23 +43,31 @@ with col1:
         unsafe_allow_html=True,
     )
     # st.image('https://avatars.githubusercontent.com/u/7678108?v=4')
-with col2:
-    st.markdown(
-        """
-    # Ian Chen (He/Him)
-                
-    - Instructor at [Lighthouse Labs](https://www.lighthouselabs.ca/)
-    - Engineer at [Clio](https://www.clio.com/)
-    """
-    )
+
+st.divider()
 
 st.markdown(
     """
-# Projects
+#### :blue[Work Experience]
+- UX Design Intern (full-time) @ ThunderCore, Taipei, Taiwan
+- UX/UI Design Intern @ Trend Micro, Taipei, Taiwan
+"""
+)
 
-- [Project 1](https://www.google.com)
-- [Project 2](https://www.google.com)
-- [Project 3](https://www.google.com)
+st.markdown(
+    """
+#### :blue[Education]
+- Tsinghua University M.S. in Data Science and Information Technology (2022-Present)
+- National Cheng-Chi University B.A. in Business Administration (2017-2021)
+"""
+)
+
+st.markdown(
+    """
+#### :blue[Hobbies]
+- Volleyball :volleyball:
+- Movie :movie_camera:
+- Music	:musical_note:
 """
 )
 
