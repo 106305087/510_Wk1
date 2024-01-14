@@ -9,6 +9,8 @@ st.set_page_config(
 
 col1, col2 = st.columns([0.7, 0.3])
 
+
+
 with col1:
     #st.subheader('Hey there! :wave:')
     #st.title('I’m Pei-Syuan :blue[(Lily)] Chou')
@@ -37,85 +39,73 @@ with col2:
 
     <div class="profile-img">
 
-    ![](https://avatars.githubusercontent.com/u/7678108?v=4)
+    ![](https://i.ibb.co/gJLmDYs/profile.png)
     </div>
     """,
         unsafe_allow_html=True,
     )
-    # st.image('https://avatars.githubusercontent.com/u/7678108?v=4')
+    # st.image('https://i.ibb.co/gJLmDYs/profile.png')
 
-st.divider()
+with st.container():
+   st.write("    ")
+   st.write("    ")
 
-st.markdown(
-    """
-#### :blue[Work Experience]
-- UX Design Intern (full-time) @ ThunderCore, Taipei, Taiwan
-- UX/UI Design Intern @ Trend Micro, Taipei, Taiwan
-"""
-)
+tab1, tab2, tab3 = st.tabs(["Work Experience", "Education", "Hobbies"])
 
-st.markdown(
-    """
-#### :blue[Education]
-- Tsinghua University M.S. in Data Science and Information Technology (2022-Present)
-- National Cheng-Chi University B.A. in Business Administration (2017-2021)
-"""
-)
-
-st.markdown(
-    """
-#### :blue[Hobbies]
-- Volleyball :volleyball:
-- Movie :movie_camera:
-- Music	:musical_note:
-"""
-)
-
-st.markdown(
-    """
-# Contact
-""")
-col1, col2, col3 = st.columns(3)
-
-# Card with image and text
-for col in [col1, col2, col3]:
-    col.markdown(
+with tab1:
+    st.markdown(
         """
-        <style>
-        .profile-img img {
-            width: 100%;
-            border-radius: 10%;
-        }
-        </style>
-
-        <div class="profile-img">
-
-        ![](https://avatars.githubusercontent.com/u/7678108?v=4)
-        </div>
-        """,
-        unsafe_allow_html=True,
+    #### :blue[Work Experience]
+    - Front Desk Receptionist @ GIX, Bellevue, United State
+    - UX Design Intern (full-time) @ ThunderCore, Taipei, Taiwan
+    - UX/UI Design Intern @ Trend Micro, Taipei, Taiwan
+    """
     )
 
+with tab2:
+    st.markdown(
+        """
+    #### :blue[Education]
+    - Tsinghua University, China (2022-Present)  
+    M.S. in Data Science and Information Technology 
+    - National Cheng-Chi University, Taiwan (2017-2021)  
+    B.A. in Business Administration, Digital Content & Technology
+    """
+    )
+
+with tab3:
+    st.markdown(
+        """
+    #### :blue[Hobbies]
+    - Volleyball :volleyball:
+    - Movie :movie_camera:
+    - Music	:musical_note:
+    """
+    )
+
+with st.container():
+   st.write("    ")
+
+# st.divider()
+
+with st.expander("My Contact Info"):
+    st.write("""
+        E-mail: peisyc@uw.edu  
+        Mobile: 425-208-666
+    """)
+
+st.write("    ")
+
 col1, col2, col3 = st.columns(3)
 
-# Card with image and text
-for col in [col1, col2, col3]:
-    col.markdown(
-        """
-        <style>
-        .profile-img img {
-            width: 100%;
-            border-radius: 10%;
-        }
-        </style>
+with col1:
+    st.write("    ")
 
-        <div class="profile-img">
+with col2:
+    st.link_button("Contact Me", "mailto: peisyc@uw.edu")
 
-        ![](https://avatars.githubusercontent.com/u/7678108?v=4)
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+with col3:
+    st.write("    ")
 
 
 ft = """
@@ -144,7 +134,7 @@ footer{
 .footer {
 position: relative;
 left: 0;
-top:230px;
+top:190px;
 bottom: 0;
 width: 100%;
 background-color: transparent;
